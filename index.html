@@ -8,10 +8,11 @@ function obliczTo() {
   var ileKol = bet;
   var bankRoll = 0;
 
-  for (i = 0; i < kol; i++) {
+  document.write(bet + "<br>");
+  for (i = 1; i < kol; i++) {
+    ileKol = ileKol * 2.1
     document.write(Math.ceil(ileKol) + "<br>");
     console.log(Math.ceil(ileKol));
-    ileKol = ileKol * 2.1
     bankRoll = bankRoll + Math.ceil(ileKol);
   }
 
