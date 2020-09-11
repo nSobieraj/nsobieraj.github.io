@@ -19,14 +19,14 @@ function obliczTo() {
   document.write('<br>' + 'How much bux you need: ' + Math.ceil(bankRoll));
   document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Odswiez</button>');
   console.log('');
-  console.log('How much bux you need: ' + bankRoll);
+  console.log('You need: ' + bankRoll);
   }
 </script>
 </head>
 <body style="background-color: white;">
   <form name="oblicz" onsubmit="return obliczTo()" method="post">
     Bet ammount: <input type="text" name="bet"> <br><br>
-    Non grays loss: <input type="text" name="kolejki"><br><br>
+    Non gray streak: <input type="text" name="kolejki"><br><br>
     <input type="submit" value="Submit">
   </form> 
 </body>
