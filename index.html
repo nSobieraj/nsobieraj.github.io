@@ -15,9 +15,9 @@ function obliczTo() {
     console.log(Math.ceil(ileKol));
     bankRoll = bankRoll + Math.ceil(ileKol);
   }
-
   //var bankRoll = bet * Math.pow(2.1, kol);
   document.write('<br>' + 'Potrzebujesz: ' + Math.ceil(bankRoll));
+  document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Odswiez</button>');
   console.log('');
   console.log('Potrzebujesz: ' + bankRoll);
   }
