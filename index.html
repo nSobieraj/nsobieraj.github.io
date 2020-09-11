@@ -1,0 +1,21 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<script>
+function obliczTo() {
+  var bet = document.forms["oblicz"]["bet"].value;
+  var kol = document.forms["oblicz"]["kolejki"].value;
+  
+  bankRoll = bet * Math.pow(2.1, kol)
+  }
+}
+</script>
+</head>
+<body>
+  <form name="oblicz" onsubmit="return obliczTo()" method="post" required>
+    Bet: <input type="text" name="bet">
+    Ile kolejek: <input type="text" name="kolejki">
+    <input type="submit" value="Submit">
+  </form> 
+</body>
+</html> 
