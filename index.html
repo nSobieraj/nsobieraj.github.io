@@ -5,18 +5,25 @@
 function obliczTo() {
   var bet = document.forms["oblicz"]["bet"].value;
   var kol = document.forms["oblicz"]["kolejki"].value;
-  
-  for (i = 0; i <= kol; i++) {
-    var bankRoll
+  var ileKol = bet;
+  var bankRoll = 0;
+
+  for (i = 0; i < kol; i++) {
+    ileKol = ileKol * 2.1
+    document.write(Math.ceil(ileKol) + "<br>");
+    console.log(Math.ceil(ileKol));
+    bankRoll = bankRoll + Math.ceil(ileKol);
   }
 
-  var bankRoll = bet * Math.pow(2.1, kol)
-  document.write('Potrzebujesz: ' + Math.ceil(bankRoll))
+  //var bankRoll = bet * Math.pow(2.1, kol);
+  document.write('<br>' + 'Potrzebujesz: ' + Math.ceil(bankRoll));
+  console.log('');
+  console.log('Potrzebujesz: ' + bankRoll);
   }
 </script>
 </head>
-<body>
-  <form name="oblicz" onsubmit="return obliczTo()" method="post" required>
+<body style="background-color: white;">
+  <form name="oblicz" onsubmit="return obliczTo()" method="post">
     Bet: <input type="text" name="bet"> <br><br>
     Ile kolejek: <input type="text" name="kolejki"><br><br>
     <input type="submit" value="Submit">
