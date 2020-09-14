@@ -15,43 +15,18 @@ function obliczTo() {
     document.write(Math.ceil(ileKol) + "<br>");
     bankRoll = bankRoll + Math.ceil(ileKol);
   }
-  //var bankRoll = bet * Math.pow(2.1, kol);
   document.write('<br>' + 'How much bux you need: ' + Math.ceil(bankRoll));
-  document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Odswiez</button>');
+  document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Refresh</button>');
   }
-  
-/*function obliczTo2() {
-  var bet = document.forms["oblicz2"]["bet"].value;
-  var kol = document.forms["oblicz2"]["kolejki"].value;
-  var ileKol = bet;
-  var ileKol2 = bet;
-  var bankRoll = 0;
-
-  document.write(bet + "<br>");
-  for (i = 0; i < kol; i++) {
-    ileKol = ileKol * 3.1
-    ileKol2 = ileKol2 * 2.1
-    document.write(Math.ceil(ileKol) + Math.ceil(ileKol2) + "<br>");
-    bankRoll = bankRoll + Math.ceil(ileKol) + Math.ceil(ileKol2);
-  }
-  //var bankRoll = bet * Math.pow(2.1, kol);
-  document.write('<br>' + 'How much bux you need: ' + Math.ceil(bankRoll));
-  document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Odswiez</button>');
-  }*/
 </script>
 </head>
 <body style="background-color: white;">
   <form name="oblicz" onsubmit="return obliczTo()" method="post">
     Bet ammount: <input type="text" name="bet"> <br><br>
-    Non gray streak: <input type="text" name="kolejki"><br><br>
-    Multiply by: <input type="range" min="1" max="5" value="0" step="0.1" id="mnoznikInputId" name="mnoznikInputName" oninput="mnoznikOutputId.value = mnoznikInputId.value">
-    <output name="mnoznikOutputName" id="mnoznikOutputId">1</output><br><br>
+    Non gray streak: <input type="text" name="kolejki" min="10" max="100000"><br><br>
+    Multiply by: <input type="range" min="1" max="5" value="2.1" step="0.1" id="mnoznikInputId" name="mnoznikInputName" oninput="mnoznikOutputId.value = mnoznikInputId.value">
+    <output name="mnoznikOutputName" id="mnoznikOutputId">2.1</output><br><br>
     <input type="submit" value="Submit">
   </form>
-  <!--<form name="oblicz2" onsubmit="return obliczTo2()" method="post">
-    Bet ammount: <input type="text" name="bet"> <br><br>
-    Lose streak: <input type="text" name="kolejki"><br><br>
-    <input type="submit" value="Submit">
-  </form>--> 
 </body>
 </html>
