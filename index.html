@@ -20,16 +20,16 @@ function obliczTo() {
   }
   
 function obliczTo2() {
-  var bet = document.forms["oblicz"]["bet"].value;
-  var kol = document.forms["oblicz"]["kolejki"].value;
+  var bet = document.forms["oblicz2"]["bet"].value;
+  var kol = document.forms["oblicz2"]["kolejki"].value;
   var ileKol = bet;
   var ileKol2 = bet;
   var bankRoll = 0;
 
   document.write(bet + "<br>");
   for (i = 0; i < kol; i++) {
-    ileKol = ileKol * 2.1
-    ileKol2 = ileKol2 * 3.1
+    ileKol = ileKol * 2
+    ileKol2 = ileKol2 * 2
     document.write(Math.ceil(ileKol) + Math.ceil(ileKol2) + "<br>");
     bankRoll = bankRoll + Math.ceil(ileKol) + Math.ceil(ileKol2);
   }
@@ -45,7 +45,7 @@ function obliczTo2() {
     Non gray streak: <input type="text" name="kolejki"><br><br>
     <input type="submit" value="Submit">
   </form>
-  
+  <br><br><br><br>
   <form name="oblicz2" onsubmit="return obliczTo2()" method="post">
     Bet ammount: <input type="text" name="bet"> <br><br>
     Lose streak: <input type="text" name="kolejki"><br><br>
