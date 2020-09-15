@@ -19,14 +19,84 @@ function obliczTo() {
   document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Refresh</button>');
   }
 </script>
+<style>
+  html {
+  background-color: #26262c;
+  padding-top: 5px;
+  padding-left: 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: #aaa;
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  #inputStyle, #mnoznikOutputId {
+  background-color: #2c2c32;
+  padding: 6px 0px 6px 0px;
+  border-radius: 5px;
+  color: #ccc;
+  border: 0 solid transparent;
+  width: 316px;
+  line-height: 1.5;
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  }
+  #mnoznikInputId {
+  width: 316px !important;
+  margin: 0 auto;
+  border: 0;
+  }
+  #mnoznikOutputId {
+  padding: 6px 20px 6px 20px;
+  }
+  #submitStyle {
+  background: linear-gradient(to bottom,#26262c 50%,#666 50%);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-size: 100% 200%;
+  display: inline-block;
+  min-width: 110px;
+  max-width: 200px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: .3s ease;
+  line-height: 1.5;
+  font-family: Roboto,sans-serif;
+  color: #666;
+  border-color: #666;
+  min-width: 316px;
+  max-width: 316px;
+  }
+  #submitStyle:hover {
+  cursor: pointer;
+  background-position: left bottom;
+  border: 2px #666 solid;
+  color: #26262c;
+  }
+</style>
 </head>
-<body style="background-color: white;">
+<body>
   <form name="oblicz" onsubmit="return obliczTo()" method="post">
-    Bet ammount: <input type="text" name="bet"> <br><br>
-    Non gray streak: <input type="text" name="kolejki" min="10" max="100000"><br><br>
-    Multiply by: <input type="range" min="2" max="3" value="2.1" step="0.1" id="mnoznikInputId" name="mnoznikInputName" oninput="mnoznikOutputId.value = mnoznikInputId.value">
-    <output name="mnoznikOutputName" id="mnoznikOutputId">2.1</output><br><br>
-    <input type="submit" value="Submit">
+    <input type="text" name="bet" id="inputStyle" placeholder="Bet Ammount"> <br><br>
+    <input type="text" name="kolejki" min="10" max="100000" id="inputStyle" placeholder="Lose Streak"><br><br>
+    <input type="range" min="2" max="3" value="2.1" step="0.1" id="mnoznikInputId" name="mnoznikInputName" oninput="mnoznikOutputId.value = mnoznikInputId.value"><br>
+    Multiply By: <output name="mnoznikOutputName" id="mnoznikOutputId">2.1</output><br><br>
+    <input type="submit" value="Submit" id="submitStyle">
   </form>
 </body>
 </html>
