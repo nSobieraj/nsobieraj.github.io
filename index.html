@@ -12,10 +12,10 @@ function obliczTo() {
   document.write(bet + "<br>");
   for (i = 0; i < kol; i++) {
     ileKol = ileKol * mnoznik
-    document.write(Math.ceil(ileKol) + "<br>");
-    bankRoll = bankRoll + Math.ceil(ileKol);
+    document.write(ileKol + "<br>");
+    bankRoll = bankRoll + ileKol;
   }
-  document.write('<br>' + 'How much bux you need: ' + Math.ceil(bankRoll));
+  document.write('<br>' + 'How much bux you need: ' + bankRoll);
   document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Refresh</button>');
   }
 </script>
