@@ -3,14 +3,16 @@
 import random, re, os, time, sys, getopt
 from pathlib import Path
 
+print("Deleting existing files.")
 for p in Path("./Roulette/Gen/").glob("*.txt"):
     p.unlink()
 for p in Path("./Roulette/").glob("*.txt"):
     p.unlink()
+print("Done.")
 time.sleep(3)
 
-files = 52
-rolls = 18900
+files = 25000
+rolls = 324
 
 colors = ['G', 'L', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'L', 'B', 'L', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'L', 'B', 'L', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'L', 'B', 'L', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'L', 'B', 'L', 'B', 'R', 'B', 'R', 'B', 'R', 'B', 'L', ]
 
@@ -18,14 +20,16 @@ i = 1
 n = 1
 y = 0
 
+print("Generating files.")
 while n <= files:    
     roulette = open('Roulette/Gen/Roll_' + str(n) + '.txt', 'w+')
     while i <= rolls:
         roulette.write(re.sub(r'(R)|(L)|(G)', r'O', random.choice(colors) + "\n"))
         i += 1
-        n += 1
     i = 1
+    n += 1
 roulette.close()
+print("Done.")
 
 rS = open('Roulette/Summary.txt', 'w+')
 
@@ -34,6 +38,7 @@ i = 1
 losses = 0
 wins = 0
 
+print("Analyzing files and generating Summary.")
 while i <= files:
 
     roulette = open('Roulette/Gen/Roll_' + str(n) + '.txt', 'r+')
@@ -69,17 +74,18 @@ while i <= files:
         rS.write('YOU LOSE' + '\n')
         losses +=1
 
-    elif len(re.findall(streak11, text)) >= 0 or len(re.findall(streak12, text)) == 0 or len(re.findall(streak13, text)) == 0 or len(re.findall(streak14, text)) == 0 or len(re.findall(streak15, text)) == 0 or len(re.findall(streak16, text)) == 0 or len(re.findall(streak17, text)) == 0 or len(re.findall(streak18, text)) == 0 or len(re.findall(streak19, text)) == 0 or len(re.findall(streak20, text)) == 0:
+    elif len(re.findall(streak11, text)) == 0 or len(re.findall(streak11, text)) > 0 or len(re.findall(streak12, text)) == 0 or len(re.findall(streak13, text)) == 0 or len(re.findall(streak14, text)) == 0 or len(re.findall(streak15, text)) == 0 or len(re.findall(streak16, text)) == 0 or len(re.findall(streak17, text)) == 0 or len(re.findall(streak18, text)) == 0 or len(re.findall(streak19, text)) == 0 or len(re.findall(streak20, text)) == 0:
 
         rS.write('YOU WIN' + '\n')
         wins +=1
     
     i += 1
     n += 1
+print("Done.")
 
-print('\n\n\nYou won ' + str(wins) + ' rounds.')
-print('And lost ' + str(losses) + ' rounds.')
-print(str(wins) + '/25 rounds\n\n\n')
+print('\n\n\nYou won ' + str(wins) + ' times.')
+print('And lost ' + str(losses) + ' times.')
+print(str(wins) + '/'+ str(files) +' times\n\n\n')
 
 roulette.close()
 rS.close()
