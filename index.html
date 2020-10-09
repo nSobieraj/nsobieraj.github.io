@@ -5,17 +5,17 @@
 function obliczTo() {
   var bet = document.forms["oblicz"]["bet"].value;
   var kol = document.forms["oblicz"]["kolejki"].value;
-  var mnoznik = document.forms["oblicz"]["mnoznikInputName"].value;
-  var ileKol = bet;
+  var mnoznik = 2.1;
   var bankRoll = 0;
 
-  document.write(bet + "<br>");
+  document.write(mnoznik + "<br>");
   for (i = 0; i < kol; i++) {
-    ileKol = ileKol * mnoznik
-    document.write(ileKol + "<br>");
-    bankRoll = bankRoll + ileKol;
+    mnoznik = mnoznik * 2.1
+    document.write(mnoznik + "<br>");
   }
-  document.write('<br>' + 'How much bux you need: ' + bankRoll);
+  bankRoll = bet / mnoznik;
+
+  document.write('<br>' + 'How much bux you can bet: ' + bankRoll);
   document.write('<br>' + '<br>' + '<button type="submit" onClick="window.location.reload();">Refresh</button>');
   }
 </script>
@@ -92,9 +92,8 @@ function obliczTo() {
 </head>
 <body>
   <form name="oblicz" onsubmit="return obliczTo()" method="post">
-    <input type="text" name="bet" id="inputStyle" placeholder="Bet Ammount"> <br><br>
+    <input type="text" name="bet" id="inputStyle" placeholder="Bank Roll"> <br><br>
     <input type="text" name="kolejki" min="10" max="100000" id="inputStyle" placeholder="Lose Streak"><br><br>
-    <input type="range" min="2" max="3" value="2.1" step="0.1" id="mnoznikInputId" name="mnoznikInputName" oninput="mnoznikOutputId.value = mnoznikInputId.value"><br>
     Multiply By: <output name="mnoznikOutputName" id="mnoznikOutputId">2.1</output><br><br>
     <input type="submit" value="Submit" id="submitStyle">
   </form>
