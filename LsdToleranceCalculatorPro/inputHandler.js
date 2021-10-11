@@ -7,7 +7,7 @@ function addDose(dose, days){
 
         return;
     }
-    if(parseInt(days.val()) > 12 || parseInt(days.val()) < 1){
+    if(parseInt(days.val()) > 32 || parseInt(days.val()) < 0){
         $('#alert-only-days').fadeIn().delay(3000).fadeOut();
 
         return;
