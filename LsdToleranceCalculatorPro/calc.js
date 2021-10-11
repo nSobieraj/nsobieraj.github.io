@@ -6,10 +6,10 @@ function addDoseToList(dose, days){
         'days': days
     });
 }
-console.log(doses);
-console.log(doses.dose);
-console.log(doses.days);
 function calculate() {
+    console.log(doses);
+    console.log(doses.dose);
+    console.log(doses.days);
     //validate input
     if(!isNormalInteger($('#inputDesiredDose').val())){
         $('#alert-only-number-desired-dose').fadeIn().delay(3000).fadeOut();
