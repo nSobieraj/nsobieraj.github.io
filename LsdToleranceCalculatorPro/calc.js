@@ -31,7 +31,8 @@ function calculate() {
                 return;
             }
 
-            calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
+            // calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
+            calcDose += ((280.059565 * (Math.pow(i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
         });
         
 
