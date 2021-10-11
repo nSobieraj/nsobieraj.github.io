@@ -15,6 +15,7 @@ function addDose(dose, days){
 
     //add to chart
     addDoseToList(parseInt(dose.val()), parseInt(days.val()));
+    var doseDays = parseInt(days.val());
 
     //add html
     var htmlString = getListHTML(listIndex, dose.val(), days.val()).toString();
