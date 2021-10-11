@@ -31,8 +31,8 @@ function calculate() {
             if(i <= doseDays){
                 calcDose = 0
             }else{
-                i = 0;
-                calcDose += ((280.059565 * (Math.pow(doseDays + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
+                for(var n=0; n<(31 - doseDays); n++)
+                calcDose += ((280.059565 * (Math.pow(doseDays + n, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
                 if(calcDose < 0){
                     calcDose = 0;
                 }
