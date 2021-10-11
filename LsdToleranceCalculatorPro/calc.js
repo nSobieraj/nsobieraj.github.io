@@ -22,10 +22,10 @@ function calculate() {
 
     lineData.splice(0, lineData.length);
 
-    for(var i=0; i<32; i++){
+    for(var i=0; i<31; i++){
         var calcDose = 0;
         doses.forEach(dose => {
-            if(dose.days + i > 32){
+            if(dose.days + i > 31){
                 return;
             }
 
