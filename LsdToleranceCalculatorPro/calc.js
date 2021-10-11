@@ -28,9 +28,14 @@ function calculate() {
         doses.forEach(dose => {
 
             // calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
-            calcDose += ((280.059565 * (Math.pow(doseDays + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
-            if(calcDose < 0){
-                calcDose = 0;
+            if(i <= doseDays){
+                calcDose = 0
+            }else{
+                i = 0;
+                calcDose += ((280.059565 * (Math.pow(doseDays + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
+                if(calcDose < 0){
+                    calcDose = 0;
+                }
             }
         });
         if(i <= doseDays){
