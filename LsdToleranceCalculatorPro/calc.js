@@ -19,16 +19,17 @@ function calculate() {
     var desiredDose = parseFloat($('#inputDesiredDose').val());
 
     var lineData = lineChart.data.datasets[0].data;
-    console.log("lineData:");
-    console.log(lineData);
-    console.log("Doses:");
-    console.log(doses);
-    console.log("desiredDose:");
-    console.log(desiredDose);
+    // console.log("lineData:");
+    // console.log(lineData);
+    // console.log("Doses:");
+    // console.log(doses);
+    // console.log("desiredDose:");
+    // console.log(desiredDose);
 
     lineData.splice(0, lineData.length);
-    console.log("lineData.splice:");
-    console.log(lineData.splice(0, lineData.length));
+    console.log(lineData.length);
+    // console.log("lineData.splice:");
+    // console.log(lineData.splice(0, lineData.length));
 
     for(var i=0; i<32; i++){
         var calcDose = 0;
@@ -40,6 +41,7 @@ function calculate() {
             // calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
             calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
             if(calcDose <= desiredDose){
+                console.log(calcDose);
                 calcDose = 0;
             }
         });
