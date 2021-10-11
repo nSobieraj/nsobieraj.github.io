@@ -6,7 +6,9 @@ function addDoseToList(dose, days){
         'days': days
     });
 }
-
+console.log(doses);
+console.log(doses.dose);
+console.log(doses.days);
 function calculate() {
     //validate input
     if(!isNormalInteger($('#inputDesiredDose').val())){
@@ -31,7 +33,7 @@ function calculate() {
 
             // calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
             calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
-            if(calcDose <= 0){
+            if(calcDose < 0){
                 calcDose = 0;
             }
         });
