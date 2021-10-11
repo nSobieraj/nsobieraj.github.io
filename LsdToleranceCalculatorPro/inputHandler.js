@@ -28,13 +28,13 @@ function addDose(dose, days){
     var listItem = $('#list-item-' + listIndex);
     listIndex++;
     
+    //updateChart
+    calculate();
 
     //clear inputs
     dose.val('');
     days.val('');
 
-    //updateChart
-    calculate();
 }
 
 function getListHTML(index, dose, days){

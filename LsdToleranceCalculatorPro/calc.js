@@ -6,6 +6,7 @@ function addDoseToList(dose, days){
         'days': days
     });
 }
+
 function calculate() {
     //validate input
     if(!isNormalInteger($('#inputDesiredDose').val())){
