@@ -19,7 +19,12 @@ function calculate() {
     var desiredDose = parseFloat($('#inputDesiredDose').val());
 
     var lineData = lineChart.data.datasets[0].data;
+    console.log("lineData:");
     console.log(lineData);
+    console.log("Doses:");
+    console.log(doses);
+    console.log("desiredDose:");
+    console.log(desiredDose);
 
     lineData.splice(0, lineData.length);
 
@@ -28,8 +33,6 @@ function calculate() {
         doses.forEach(dose => {
             console.log("Dose:");
             console.log(dose);
-            console.log("lineData:");
-            console.log(lineData);
             if(dose.days + i > 32){
                 return;
             }
@@ -39,8 +42,6 @@ function calculate() {
             if(calcDose <= desiredDose){
                 calcDose = desiredDose;
             }
-            console.log("calcDose:");
-            console.log(calcDose);
         });
         
 
