@@ -35,8 +35,8 @@ function calculate() {
                 calcDose = 0;
             }
         });
-        if(i <= doses.days){
-            lineData.push(0 + desiredDose);
+        if(i <= doses[0].days){
+            lineData.push(desiredDose);
         }else {
             lineData.push(calcDose + desiredDose);
         }
