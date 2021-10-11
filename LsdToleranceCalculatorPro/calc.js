@@ -8,8 +8,6 @@ function addDoseToList(dose, days){
 }
 function calculate() {
     console.log(doses);
-    console.log(doses.dose);
-    console.log(doses.days);
     //validate input
     if(!isNormalInteger($('#inputDesiredDose').val())){
         $('#alert-only-number-desired-dose').fadeIn().delay(3000).fadeOut();
@@ -37,9 +35,12 @@ function calculate() {
                 calcDose = 0;
             }
         });
-        
+        if(i <= dose.days){
+            lineData.push(0 + desiredDose);
+        }else {
+            lineData.push(calcDose + desiredDose);
+        }
 
-        lineData.push(calcDose + desiredDose);
     }
 
     lineChart.update();
