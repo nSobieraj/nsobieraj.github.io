@@ -23,11 +23,11 @@ function calculate() {
 
     lineData.splice(0, lineData.length);
 
-    for(var i=0; i<12; i++){
+    for(var i=0; i<32; i++){
         var calcDose = 0;
         doses.forEach(dose => {
             console.log(dose);
-            if(dose.days + i > 12){
+            if(dose.days + i > 32){
                 return;
             }
 
