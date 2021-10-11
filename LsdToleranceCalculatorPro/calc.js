@@ -15,6 +15,7 @@ function calculate() {
     }
     
     var desiredDose = parseFloat($('#inputDesiredDose').val());
+    var doseDays = parseFloat($('#inputDays').val());
 
     var lineData = lineChart.data.datasets[0].data;
     console.log(lineData)
