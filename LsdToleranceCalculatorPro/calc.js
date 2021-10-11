@@ -25,12 +25,12 @@ function calculate() {
     for(var i=0; i<31; i++){
         var calcDose = 0;
         doses.forEach(dose => {
-            if(dose.days + i > 31){
+            if(doses[0].days + i > 31){
                 return;
             }
 
             // calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
-            calcDose += ((280.059565 * (Math.pow(dose.days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
+            calcDose += ((280.059565 * (Math.pow(doses[0].days + i, -0.412565956))) * (parseFloat(dose.dose) / 100) - dose.dose);
             if(calcDose < 0){
                 calcDose = 0;
             }
