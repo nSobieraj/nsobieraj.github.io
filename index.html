@@ -42,7 +42,134 @@
         }
         .text {
             color: black;
+        }<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witryny</title>
+    <style>
+        html * {
+            letter-spacing: 0.04em;
+            line-height: 1.2;
         }
+        code {
+          color: darkorange;
+          background-color: #f1f1f1;
+          padding: 2px;
+          font-size: 105%;
+          line-height: 1.5;
+          display: block;
+          width: fit-content;
+        }
+        pre {
+          width: fit-content;
+        }
+        code * {
+          letter-spacing: normal;
+        }
+        body {
+            max-width: min-content;
+        }
+        code b {
+            color: #494949;
+        }
+        .tag {
+            color: crimson;
+        }
+        .property {
+            color: forestgreen;
+        }
+        .propertyText {
+            color: crimson;
+        }
+        .text {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Jezyki</h2>
+
+    <p><span><b>Jezyk</b> to ukształtowany społecznie system budowania wypowiedzi. Stosowany do komunikacji interpersonalnej. Cechuje go Gramatyka, Fonetyka i Semiotyka.</span></p>
+    <p><span><b>Język programowania</b> podobnie jak <b>języki naturalne</b> składa się ze zbiorów reguł syntaktycznych oraz semantyki, które opisują, jak budować poprawne wyrażenia oraz jak komputer ma je rozumieć. Pozwala na zapis algorytmów oraz innych zadań, jakie komputer ma wykonać.</span></p>
+    
+    <h2>Program komputerowy</h2>
+    
+    <p><b>Program Komputerowy</b> to zbiór uporządkowanych poleceń, napisanych w języku programowania. Po wykonaniu może zakończyć się poprawnie lub błędnie.<br>
+    <b>Wykonanie programu komputerowego</b> polega na:<ol>
+        <li>Umieszczeniu programu w pamięci operacyjnej komputera</li>
+        <li>Wskazaniu procesorowi adresu pierwszej instrukcji</li>
+        <li>Po tych czynnościach procesor wykonuje po kolei następne instrukcje programu do zakończenia</li>
+    </ol></p>
+    
+    <h2>Środowiska Programowania</h2>
+    
+    <p><b>Lokalne Środowisko Pracy</b> to zbiór aplikacji umożliwiających programowanie w danym języku.<br>
+        Składa się z:<ol>
+        <li>Systemu operacyjnego,</li>
+        <li>Edytora kodu,</li>
+        <li>Systemu kontroli wersji,</li>
+        <li>Narzędzi do testowania,</li>
+        <li>Środowiska uruchomieniowego (niezbędne do uruchomienia programu)</li>
+    </ol></p>
+    <p><b>Środowisko Programowania Online</b> to znajdujące się na stronie internetowej środowisko do tworzenia, wykonywania, edycji i testowania kodu użytkownika.</p>
+    
+    <p><b>Zintegrowane Środowisko Programistyczne (IDE)</b> to program lub zbiór programów służących do tworzenia, edycji, kompilacji i testowania kodu źródłowego oprogramowania. Np. Code::Blocks</p>
+    
+    <p><b>Debugger</b> to program służący do dynamicznej analizy innych programów, w celu znalezienia i identyfikacji zawartych w nich błędów (Bug'ów).</p>
+    
+    <p><b>Konsola deweloperska</b> to zintegrowane środowisko programistyczne, służące do tworzenia, debugowania i testowania kodu użytkownika bezpośrednio w przeglądarce.</p>
+    
+    <p><b>Interpreter</b> to program analizujący kod źródłowy programu po czym wykonuje przeanalizowane fragmenty bez kompilacji.</p>
+    
+    <p><b>Język interpretowany</b> to język programowania, który jest wykonywany bez kompilacji. Ułatwia pisanie programów zgodnych z wieloma systemami operacyjnymi.</p>
+    
+    <p><b>Kompilacja, a interpretacja:</b><br>
+    Interpretacja różni się od Kompilacji tym, że kod źródłowy jest wykonywany, a nie tłumaczony na wykonywalny lub pośredni kod maszynowy po czym zapisywany do pliku do wykonania później.</p>
+    <p><b>Wady i zalety:</b><br>
+    Interpretacja jest wolniejsza i zajmuje więcej zasobów systemowych niż wykonanie skompilowanego kodu ale może zająć mniej czasu niż kompilacja oraz uruchomienie programu. 
+    Przydaje się przy tworzeniu i testowaniu kodu, bo często cykl <b>[Edycja&nbsp;>&nbsp;Interpretacja&nbsp;>&nbsp;Debugowanie]</b> trwa znacznie krócej niż <b>[Edycja&nbsp;>&nbsp;Kompilacja&nbsp;>&nbsp;Wykonanie&nbsp;>&nbsp;Debugowanie]</b>.</p>
+    
+    
+    <h2>Algorytmy</h2>
+    
+    <p><b>Algorytm</b> to skończony ciąg jasno zdefiniowanych czynności koniecznych do wykonania pewnego rodzaju zadań czyli inaczej sposób postępowania prowadzący do rozwiązania problemu.</p>
+    
+    <p>Sposoby przedstawienia algorytmów:<ol>
+        <li>Opis słowny</li>
+        <li>Lista kroków</li>
+        <li>Schemat blokowy (postać graficzna)</li>
+        <li>Za pomocą języka formalnego</li>
+    </ol></p>
+    <p>Przykład Algorytmu na zrobienie herbaty w postaci listy kroków:<ol>
+        <li>Zagotuj wodę</li>
+        <li>Wlej wodę do kubka</li>
+        <li>Włoż woreczek z herbatą do kubka</li>
+    </ol></p>
+    
+    <h2>Templatka HTML</h2>
+    
+    <pre><code>&lt;!DOCTYPE html&gt; <b>-- Definiujemy typ dokumentu</b>
+&lt;<span class="tag">html</span></span> <span class="property">lang=</span><span class="propertyText">"pl"</span>&gt; <b>-- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język polski</b>
+&lt;<span class="tag">head</span>&gt; <b>-- "Głowa" strony, kod niewidoczny dla użytkownika, lecz widoczny dla przeglądarki</b>
+    &lt;<span class="tag">meta</span> <span class="property">charset=</span><span class="propertyText">"UTF-8"</span>&gt; <b>-- Nadajemy format wyświetlania strony</b>
+    &lt;<span class="tag">title</span>&gt;<span class="text">Tytuł strony</span>&lt;<span class="tag">/title</span>&gt; <b>-- Tytuł strony wyświetlany w nazwie karty przeglądarki</b>
+&lt;<span class="tag">/head</span>&gt; <b>-- Zamknięcie tagu &lt;head&gt;</b>
+&lt;<span class="tag">body</span>&gt; <b>-- "Ciało" strony, kod widziany przez użytkownika</b>
+    &lt;<span class="tag">p</span>&gt;<span class="text">Przykładowy paragraf</span>&lt;<span class="tag">/p</span>&gt;
+&lt;<span class="tag">/body</span>&gt; <b>-- Zamknięcie tagu &lt;body&gt;</b>
+&lt;<span class="tag">/html</span>&gt; <b>-- Zamknięcie tagu &lt;html&gt;</b></code></pre>
+
+    <h2>Definicje</h2>
+        <p><b>Kaskadowe Arkusze Stylów (CSS)</b> to język odpowiedzialny za wygląd i rozkład elementów na stronie. Stylizuje elementy znajdujące się w pliku HTML.</p>
+        <p><b>Hipertekstowy Język Znaczników (HTML)</b> jest wykorzystywany do tworzenia dokumentów hipertekstowych. Pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej.</p>
+        <p><b>JavaScript (JS)</b> to skryptowy język programowania najczęściej stosowany na stronach internetowych. Skrypty najczęściej służą do zapewnienia interakcji ze stroną poprzez reagowanie na zdarzenia, walidację danych w formularzach lub tworzenia złożonych efektów wizualnych.</p>
+        <p><b>Hypertext Preprocessor (PHP)</b> interpretowany, skryptowy język programowania zaprojektowany do generowania stron internetowych i budowania aplikacji webowych w czasie rzeczywistym</p>
+        <p><b>Strukturalny Język Zapytań (SQL)</b> używany do tworzenia, modyfikowania baz danych oraz do umieszczania i pobierania danych z baz danych.</p>
+</body>
+</html>
     </style>
 </head>
 <body>
