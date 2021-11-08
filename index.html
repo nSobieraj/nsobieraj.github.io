@@ -12,6 +12,9 @@
           padding: 2px;
           font-size: 105%;
         }
+        body {
+            max-width: 500px;
+        }
     </style>
 </head>
 <body>
@@ -80,17 +83,19 @@
 
     <h2>Templatka HTML</h2>
     
-    <pre><code>
-        <!DOCTYPE html> -- Definiujemy typ dokumentu
-        <html lang="pl"> -- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język pl czyli polski
-        <head> -- "Głowa" strony, kod który się nie wyświetla na stronie
-            <meta charset="UTF-8"> -- Nadajemy format wyświetlania strony 
-            <title>Tytuł strony</title> -- Tytuł strony wyświetlany w nazwie karty
-        </head> -- Zamknięcie tagu <head>
-        <body> -- "Ciało" strony, kod widziany przez użytkownika
+    <pre><code>&lt;!DOCTYPE html&gt; -- Definiujemy typ dokumentu
+        &lt;html lang="pl"&gt; -- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język pl czyli polski
+        &lt;head&gt; -- "Głowa" strony, kod który się nie wyświetla na stronie
+            &lt;meta charset="UTF-8"&gt; -- Nadajemy format wyświetlania strony 
+            &lt;title&gt;Tytuł strony&lt;/title&gt; -- Tytuł strony wyświetlany w nazwie karty
+        &lt;/head&gt; -- Zamknięcie tagu &lt;head&gt;
+        &lt;body&gt; -- "Ciało" strony, kod widziany przez użytkownika
             Przykładowy tekst
-        </body> -- Zamknięcie tagu <body>
-        </html> -- Zamknięcie tagu <html>
-    </code></pre>
+        &lt;/body&gt; -- Zamknięcie tagu &lt;body>
+        &lt;/html&gt; -- Zamknięcie tagu &lt;html></code></pre>
+
+    <h2>Definicje</h2>
+        <p>Kaskadowe Arkusze Stylów (CSS) to język odpowiedzialny za wygląd i rozkład elementów na stronie. Stylizuje elementy znajdujące się w pliku HTML.</p>
+        <p>Hipertekstowy Język Znaczników (HTML) jest wykorzystywany do tworzenia dokumentów hipertekstowych. Pozwala opisać strukturę informacji zawartych wewnątrz strony internetowej.</p>
 </body>
 </html>
