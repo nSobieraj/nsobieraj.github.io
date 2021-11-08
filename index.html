@@ -14,11 +14,11 @@
           line-height: 1.5;
           display: block;
         }
-        pre {
-            max-width: fit-content;
-        }
         body {
-            max-width: 500px;
+            max-width: min-content;
+        }
+        b {
+            color: blue;
         }
     </style>
 </head>
@@ -85,19 +85,19 @@
         <li>Wlej wodę do kubka</li>
         <li>Włoż woreczek z herbatą do kubka</li>
     </ol></p>
-
+    
     <h2>Templatka HTML</h2>
     
     <pre><code>&lt;!DOCTYPE html&gt; <b>-- Definiujemy typ dokumentu</b>
-    &lt;html lang="pl"&gt; <b>-- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język pl czyli polski</b>
-    &lt;head&gt; <b>-- "Głowa" strony, kod który się nie wyświetla na stronie</b>
-        &lt;meta charset="UTF-8"&gt; <b>-- Nadajemy format wyświetlania strony</b>
-        &lt;title&gt;Tytuł strony&lt;/title&gt; <b>-- Tytuł strony wyświetlany w nazwie karty</b>
-    &lt;/head&gt; <b>-- Zamknięcie tagu &lt;head&gt;</b>
-    &lt;body&gt; <b>-- "Ciało" strony, kod widziany przez użytkownika</b>
-        &lt;p&gt;Przykładowy paragraf&lt;/p&gt;
-    &lt;/body&gt; <b>-- Zamknięcie tagu &lt;body&gt;</b>
-    &lt;/html&gt; <b>-- Zamknięcie tagu &lt;html&gt;</b></code></pre>
+    &lt;<span class="tag">html</span></span> <span class="property">lang=</span><span class="propertyText">"pl"</span>&gt; <b>-- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język pl czyli polski</b>
+    &lt;<span class="tag">head</span>&gt; <b>-- "Głowa" strony, kod który się nie wyświetla na stronie</b>
+        &lt;<span class="tag">meta</span> <span class="property">charset=</span><span class="propertyText">"UTF-8"</span>&gt; <b>-- Nadajemy format wyświetlania strony</b>
+        &lt;<span class="tag">title</span>&gt;Tytuł strony&lt;<span class="tag">/title</span>&gt; <b>-- Tytuł strony wyświetlany w nazwie karty</b>
+    &lt;<span class="tag">/head</span>&gt; <b>-- Zamknięcie tagu &lt;<span class="tag">head</span>&gt;</b>
+    &lt;<span class="tag">body</span>&gt; <b>-- "Ciało" strony, kod widziany przez użytkownika</b>
+        &lt;<span class="tag">p</span>&gt;Przykładowy paragraf&lt;<span class="tag">/p</span>&gt;
+    &lt;<span class="tag">/body</span>&gt; <b>-- Zamknięcie tagu &lt;<span class="tag">body</span>&gt;</b>
+    &lt;<span class="tag">/html</span>&gt; <b>-- Zamknięcie tagu &lt;<span class="tag">html</span>&gt;</b></code></pre>
 
     <h2>Definicje</h2>
         <p>Kaskadowe Arkusze Stylów (CSS) to język odpowiedzialny za wygląd i rozkład elementów na stronie. Stylizuje elementy znajdujące się w pliku HTML.</p>
