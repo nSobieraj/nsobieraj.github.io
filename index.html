@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Witryny</title>
+    <style>
+        code {
+          font-family: Consolas,"courier new";
+          color: crimson;
+          background-color: #f1f1f1;
+          padding: 2px;
+          font-size: 105%;
+        }
+    </style>
 </head>
 <body>
     <h2>Jezyki</h2>
@@ -71,18 +80,18 @@
     </ol></p>
 
     <h2>Templatka HTML</h2>
-    <code>
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
+    
+    <pre><code>
+        <!DOCTYPE html> -- Definiujemy typ dokumentu
+        <html lang="pl"> -- Definiujemy gdzie zaczyna się nasz kod html i nadajemy mu język pl czyli polski
+        <head> -- "Głowa" strony, kod który się nie wyświetla na stronie
+            <meta charset="UTF-8"> -- Nadajemy format wyświetlania strony 
+            <title>Tytuł strony</title> -- Tytuł strony wyświetlany w nazwie karty
+        </head> -- Zamknięcie tagu <head>
+        <body> -- "Ciało" strony, kod widziany przez użytkownika
             Przykładowy tekst
-        </body>
-        </html>
-    </code>
+        </body> -- Zamknięcie tagu <body>
+        </html> -- Zamknięcie tagu <html>
+    </code></pre>
 </body>
 </html>
